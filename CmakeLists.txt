@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+
+# 專案名稱
+project(ColorAreaMeasurement)
+
+# 設定 C++ 標準
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# 尋找 OpenCV 套件
+find_package(OpenCV REQUIRED)
+
+# 添加可執行檔案
+add_executable(color_measure main.cpp)
+
+# 連結 OpenCV 函式庫
+target_link_libraries(color_measure ${OpenCV_LIBS})
